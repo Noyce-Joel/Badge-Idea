@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 
 
-export default function () {
+export default function circles2() {
   return (
     <motion.div
       

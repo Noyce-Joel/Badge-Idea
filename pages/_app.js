@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 import NavBar from '/components/NavBar'
-import Contact from '/components/contact'
+import ContactMe from '/components/ContactMe'
 import { AnimatePresence, Wait } from 'framer-motion'
 
 
@@ -14,7 +14,7 @@ export default function App({ Component, pageProps, router }) {
       <NavBar />
       </section>
       <section className="">
-        <Contact />
+        <ContactMe />
       </section>
      
   </div>
