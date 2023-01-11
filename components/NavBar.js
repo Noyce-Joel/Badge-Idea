@@ -5,7 +5,7 @@ import useMeasure from "react-use-measure";
 import Circles from "/components/circles";
 import Link from "next/link";
 
-export default function Index() {
+export default function Navbar() {
   const [ref, bounds] = useMeasure({ scroll: false });
   const [isHover, setIsHover] = useState(false);
   const [isPress, setIsPress] = useState(false);

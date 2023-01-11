@@ -5,7 +5,7 @@ import useMeasure from "react-use-measure";
 import Circles2 from "/components/circles2";
 import Link from "next/link";
 
-export default function Index() {
+export default function contact() {
   const [ref, bounds] = useMeasure({ scroll: false });
   const [isHover, setIsHover] = useState(false);
   const [isPress, setIsPress] = useState(false);

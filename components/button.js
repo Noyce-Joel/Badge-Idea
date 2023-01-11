@@ -24,13 +24,12 @@ export default function Index() {
     <div className="h-screen relative flex flex-col items-center justify-center z-20">
       <MotionConfig transition={transition}>
         <motion.div
-          initail='false'
+          initail="false"
           animate={isHover ? "hide" : "rests"}
           variants={{
             hide: { opacity: 0 },
             rests: { opacity: 1 },
           }}
-        
           className="absolute top-72 text-md text-white mb-[25px]"
         >
           <motion.div
@@ -55,7 +54,7 @@ export default function Index() {
           <motion.button
             className="z-10"
             ref={ref}
-            initial='false'
+            initial="false"
             animate={isHover ? "hover" : "rest"}
             whileTap="press"
             variants={{
@@ -110,10 +109,7 @@ export default function Index() {
               exit={{
                 x: 22,
                 y: -25,
-                
-              
               }}
-             
             >
               Joel
             </motion.div>
@@ -129,7 +125,7 @@ export default function Index() {
               }}
               exit={{
                 x: -98,
-                y: 20
+                y: 20,
               }}
             >
               Noyce
