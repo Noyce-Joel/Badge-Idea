@@ -1,9 +1,9 @@
 import { motion } from "framer-motion-3d";
 import { MotionConfig } from "framer-motion";
 import { useRef, useLayoutEffect } from "react";
-import { transition } from "./settings";
+import { transition } from "/lib/settings";
 import { Canvas, useThree, useLoader } from "@react-three/fiber";
-import { useSmoothTransform } from "./use-smooth-transform";
+import { useSmoothTransform } from "/lib/use-smooth-transform";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 export function Shapes({ isHover, isPress, mouseX, mouseY }) {

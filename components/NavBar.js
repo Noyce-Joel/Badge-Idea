@@ -1,6 +1,6 @@
 import { Suspense, useState } from "react";
 import { motion, MotionConfig, useMotionValue } from "framer-motion";
-import { transition } from "/pages/settings";
+import { transition } from "/lib/settings";
 import useMeasure from "react-use-measure";
 import Circles from "/components/circles";
 import Link from "next/link";
