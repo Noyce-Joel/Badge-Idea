@@ -24,7 +24,7 @@ export default function Index() {
   };
 
   return (
-    <div className="h-screen relative flex flex-col items-center justify-center z-20">
+    <div className="h-screen w-screen relative flex flex-col items-center justify-center z-20">
       <MotionConfig transition={transition}>
         <motion.div
           initail="false"
