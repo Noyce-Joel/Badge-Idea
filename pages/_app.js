@@ -6,14 +6,14 @@ import { AnimatePresence, Wait } from 'framer-motion'
 
 export default function App({ Component, pageProps, router }) {
   return( 
-    <div className='h-screen w-screen overflow-hidden bg-gradient-to-b from-[#9b9898] to-[#535d6a]'>
+    <div className='sm:overflow-clip h-screen w-screen relative overflow-hidden bg-gradient-to-b from-[#9b9898] to-[#535d6a]'>
       <AnimatePresence >
       <Component key={router.pathname} {...pageProps} />
       </AnimatePresence>
-      <section className=''>
+      <section className='overflow-hidden'>
       <NavBar />
       </section>
-      <section className="">
+      <section className="overflow-hidden">
         <ContactMe />
       </section>
      
