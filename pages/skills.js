@@ -8,7 +8,7 @@ import Skill4 from '/components/Skills/Skill4'
 import Skill5 from '/components/Skills/Skill5' 
 import Skill6 from '/components/Skills/Skill6' 
 import Skill7 from '/components/Skills/Skill7'
-import { transition2 } from './settings';
+import { transition2 } from '/lib/settings';
 
 
 
