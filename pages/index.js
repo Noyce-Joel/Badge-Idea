@@ -20,7 +20,7 @@ function index() {
       }}
      
     >
-      <section className="bg-#000000b9 h-screen w-screen absolute top-0">
+      <section className="sm:p-5 md:p-0 bg-#000000b9 h-screen w-screen absolute top-0">
         <Button />
       </section>
 
