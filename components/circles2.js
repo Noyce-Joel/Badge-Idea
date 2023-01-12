@@ -7,7 +7,7 @@ export default function circles2() {
   return (
     <motion.div
       
-      className="absolute flex justify-center items-center z-0 pointer-events-none left-[10px] top-2 animate-pulse"
+      className="absolute overflow flex justify-center items-center z-0 pointer-events-none left-[10px] top-2 animate-pulse"
     >
       <div className="absolute border border-white-100 opacity-40 rounded-full h-[85px] w-[85px]" />
       <div className="absolute border border-white-200 opacity-20 rounded-full h-[150px] w-[150px]" />
