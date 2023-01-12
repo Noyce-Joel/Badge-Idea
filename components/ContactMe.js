@@ -41,7 +41,7 @@ export default function ContactMe() {
             mouseX.set(e.clientX - bounds.x - bounds.width / 2);
             mouseY.set(e.clientY - bounds.y - bounds.height / 2);
           }}
-          className="header relative flex flex-col bottom-0 text-white right-0 p-10 pr-[71.5px]"
+          className="header relative flex flex-col bottom-0 text-white right-0 p-10 pr-[65.5px]"
         >
           <motion.ul className="absolute flex flex-col top-0 text-white left-0 p-4 tracking-widest space-y-2 uppercase text-sm">
           <li className="list-disc ml-[80px]"></li>

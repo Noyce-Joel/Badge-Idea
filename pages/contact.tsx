@@ -63,7 +63,7 @@ export default function ContactMe({}: Props) {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="justify-center items-center grid grid-col space-y-4"
+          className="w-screen justify-center items-center grid grid-col space-y-4"
         >
           <div className="flex space-x-2">
             <input
