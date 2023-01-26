@@ -4,7 +4,21 @@ import Button from "/components/button";
 
 function index() {
   return (
-    
+    <div>
+      <motion.div 
+      initial={{
+        opacity: 0,
+      }}
+      animate={{
+        opacity: 1
+      }}
+      transition={{
+        duration: 1,
+        delay: 1.5
+      }}
+      className="justify-center  text-white tracking-widest uppercase flex items-center mx-auto h-screen w-screen relative">
+        Welcome to my portfolio
+      </motion.div>
     <motion.div
     initial={{opacity:0}}
     animate={{opacity:1,
@@ -28,6 +42,7 @@ function index() {
 
     
     </motion.div>
+    </div>
   );
 }
 

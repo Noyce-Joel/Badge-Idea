@@ -5,8 +5,6 @@ import { transition } from "/lib/settings";
 import useMeasure from "react-use-measure";
 import Link from "next/link";
 
-import { Typewriter } from "react-simple-typewriter";
-
 export default function Index() {
   const [ref, bounds] = useMeasure({ scroll: false });
   const [isHover, setIsHover] = useState(false);
@@ -18,13 +16,10 @@ export default function Index() {
   const resetMousePosition = () => {
     mouseX.set(0);
     mouseY.set(0);
-
-
-
   };
 
   return (
-    <div className="h-screen w-screen relative flex flex-col items-center justify-center z-20">
+    <div className="fixed left-[145px] bottom-[-555px] pb-10 h-screen w-screen flex flex-col flex-noshrink z-20">
       <MotionConfig transition={transition}>
         <motion.div
           initail="false"
@@ -33,7 +28,7 @@ export default function Index() {
             hide: { opacity: 0 },
             rests: { opacity: 1 },
           }}
-          className="absolute top-72 text-md text-white mb-[25px]"
+          className="relative text-md text-white mb-[25px]"
         >
           <motion.div
             id="writer"
@@ -49,7 +44,8 @@ export default function Index() {
             }}
             whileInView={{ once: true }}
           >
-            <Typewriter words={["Hover for a glimpse into my world..."]} />
+            <a className="ease-in ml-[95px]">@</a>
+          
           </motion.div>
         </motion.div>
 
@@ -77,8 +73,8 @@ export default function Index() {
             onTap={() => setIsPress(false)}
             onTapCancel={() => setIsPress(false)}
             onPointerMove={(e) => {
-              mouseX.set(e.clientX - bounds.x - bounds.width / 2.5);
-              mouseY.set(e.clientY - bounds.y - bounds.height / 2.5);
+              mouseX.set(e.clientX - bounds.x - bounds.width / 2);
+              mouseY.set(e.clientY - bounds.y - bounds.height / 2);
             }}
           >
             <motion.div
@@ -88,7 +84,7 @@ export default function Index() {
                 hover: { opacity: 1 },
               }}
             >
-              <div className="container">
+              <motion.div className="container">
                 <Suspense fallback={null}>
                   <Shapes
                     isHover={isHover}
@@ -97,7 +93,7 @@ export default function Index() {
                     mouseY={mouseY}
                   />
                 </Suspense>
-              </div>
+              </motion.div>
             </motion.div>
             <motion.div
               variants={{
@@ -134,6 +130,7 @@ export default function Index() {
               Noyce
             </motion.div>
           </motion.button>
+          
         </Link>
       </MotionConfig>
     </div>

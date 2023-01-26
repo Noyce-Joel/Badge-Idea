@@ -41,7 +41,7 @@ export default function ContactMe({}: Props) {
       y: '100%'
     }}
     
-    className="absolute h-screen w-screen flex text-left px-10 justify-evenly items-center">
+    className="absolute h-screen w-screen flex flex-shrink text-left px-10 justify-evenly items-center">
       
       <div className="relative grid-flow-row space-y-10">
         
