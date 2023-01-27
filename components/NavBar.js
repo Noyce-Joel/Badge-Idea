@@ -12,7 +12,7 @@ export default function Navbar() {
   const [isPress2, setIsPress2] = useState(false);
 
   return (
-    <motion.div className="h-screen w-screen flex flex-col items-center justify-center z-0">
+    <motion.div className="h-screen w-screen flex flex-col items-center justify-center z-50">
       <MotionConfig transition={transition}>
         <motion.hgroup
           ref={ref}
@@ -28,9 +28,9 @@ export default function Navbar() {
           onTapStart={() => setIsPress2(true)}
           onTap={() => setIsPress2(false)}
           onTapCancel={() => setIsPress2(false)}
-          className="header absolute flex flex-col top-0 text-white left-0 p-5 "
+          className="header absolute flex flex-col top-0 text-white left-0 p-5 z-50"
         >
-          <motion.ul className="absolute flex flex-col top-0 text-white left-0 p-4 tracking-widest space-y-2 uppercase text-sm" 
+          <motion.ul className="absolute flex flex-col top-0 text-white left-0 p-4 tracking-widest space-y-2 uppercase text-sm z-50" 
           initial={{
             x:-900
           }}

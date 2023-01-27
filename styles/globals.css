@@ -49,7 +49,7 @@ button {
 .header {
   position: absolute;
   border-radius: 70px;
- 
+  z-index: 0;
  
 }
 

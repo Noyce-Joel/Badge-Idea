@@ -19,7 +19,7 @@ export default function Index() {
   };
 
   return (
-    <div className="fixed left-[145px] bottom-[-555px] pb-10 h-screen w-screen flex flex-col flex-noshrink z-20">
+    <div className="h-screen w-screen flex z-0">
       <MotionConfig transition={transition}>
         <motion.div
           initail="false"

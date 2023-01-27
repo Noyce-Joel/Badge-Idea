@@ -5,43 +5,38 @@ import Button from "/components/button";
 function index() {
   return (
     <div>
-      <motion.div 
-      initial={{
-        opacity: 0,
-      }}
-      animate={{
-        opacity: 1
-      }}
-      transition={{
-        duration: 1,
-        delay: 1.5
-      }}
-      className="justify-center  text-white tracking-widest uppercase flex items-center mx-auto h-screen w-screen relative">
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: 1,
+        }}
+        transition={{
+          duration: 1,
+          delay: 1.5,
+        }}
+        className="justify-center  text-white tracking-widest uppercase flex items-center mx-auto h-screen w-screen relative"
+      >
         Welcome to my portfolio
+        <div>
+          
+        </div>
       </motion.div>
-    <motion.div
-    initial={{opacity:0}}
-    animate={{opacity:1,
-    }}
-      exit={{ opacity: 0,
-        
-     }}
-      transition={{
-        animation: {duration: 5},
-        exit: {duration: 5},
-       
-        ease: 'anticipate'
-      }}
-     
-    >
-      <section className="sm:p-5 md:p-0 bg-#000000b9 h-screen w-screen absolute top-0">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{
+          animation: { duration: 5 },
+          exit: { duration: 5 },
+
+          ease: "anticipate",
+        }}
+        className="top-[170px] left-[30px] flex relative flex-col header"
+      >
         <Button />
-      </section>
-
-    
-
-    
-    </motion.div>
+      </motion.div>
     </div>
   );
 }
