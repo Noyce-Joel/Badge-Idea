@@ -47,17 +47,17 @@ export default function Navbar() {
 
             <Link href="about">
               <li className="cursor-pointer hover:text-gray-400 hover:duration-[425ms] active:duration-[250ms] active:scale-105">
-                About
+                Chess
               </li>
             </Link>
 
             <li className="cursor-pointer hover:text-gray-400 hover:duration-[425ms] active:duration-[250ms] active:scale-105">
-              Experience
+              Climbing
             </li>
 
             <Link href="skills">
               <li className="cursor-pointer hover:text-gray-400 hover:duration-[425ms] active:duration-[250ms] active:scale-105">
-                Skills
+                Coding
               </li>
             </Link>
           </motion.ul>

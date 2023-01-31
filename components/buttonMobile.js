@@ -5,7 +5,7 @@ import { transition } from "/lib/settings";
 import useMeasure from "react-use-measure";
 
 
-function buttonMobile() {
+function ButtonMobile() {
     const [ref, bounds] = useMeasure({ scroll: false });
   const [isHover, setIsHover] = useState(true);
   const [isPress, setIsPress] = useState(false);
@@ -18,7 +18,9 @@ function buttonMobile() {
     mouseY.set(0);
   };
   return (
-    <div className='w-screen top-0 items-center justify-center flex relative mx-auto '>
+    <motion.div 
+   
+    className='w-screen top-0 items-center justify-center flex relative mx-auto '>
         <MotionConfig>
         <motion.button
             className="z-10"
@@ -28,8 +30,8 @@ function buttonMobile() {
             animate={isHover ? "hover" : "rest"}
             whileTap="press"
             variants={{
-              rest: { scale: 1 },
-              hover: { scale: 1.2 },
+              rest: { scale: 1,},
+              hover: { scale: 1.2, },
               press: { scale: 1.4 },
             }}
             onHoverStart={() => {
@@ -99,8 +101,8 @@ function buttonMobile() {
             </motion.div>
           </motion.button>
         </MotionConfig>
-        </div>
+        </motion.div>
   )
 }
 
-export default buttonMobile
+export default ButtonMobile

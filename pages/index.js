@@ -19,11 +19,15 @@ function index() {
         }}
         className="justify-center  text-white tracking-widest uppercase flex items-center mx-auto h-screen w-screen relative"
       >
-        Welcome to my portfolio
-        <div>
-          
-        </div>
+       Goals
+
+      
+        
       </motion.div>
+      <p>
+        Hey 
+       </p>
+     
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -52,8 +56,14 @@ function index() {
         className="top-[180px] items-center flex md:hidden relative flex-col header"
       >
       <ButtonMobile />
+
+      
         
       </motion.div>
+
+      <div className="flex justify-center items-center relative text white w-screen h-screen">
+        Hey
+      </div>
     </div>
   );
 }
