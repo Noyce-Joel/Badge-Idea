@@ -36,7 +36,7 @@ function index() {
 
           ease: "anticipate",
         }}
-        className="top-[180px] items-center flex lg:hidden relative flex-col header p-1"
+        className="top-[180px] items-center flex lg:hidden relative flex-col header"
       >
       <ButtonMobile />
 
