@@ -26,7 +26,7 @@ export default function ContactMe() {
         onTapStart={() => setIsPress(true)}
         onTap={() => setIsPress(false)}
         onTapCancel={() => setIsPress(false)}
-        className="header relative flex flex-col bottom-0 text-white right-0 p-10 pr-[65.5px]"
+        className="header relative flex flex-col bottom-0 text-white right-0 p-10 pr-[65.5px] overflow-clip"
       >
         <motion.ul className="absolute flex flex-col top-0 text-white left-0 p-4 tracking-widest space-y-2 uppercase text-sm">
           <li className="list-disc ml-[80px]"></li>

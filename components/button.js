@@ -72,10 +72,7 @@ export default function Index() {
             onTapStart={() => setIsPress(true)}
             onTap={() => setIsPress(false)}
             onTapCancel={() => setIsPress(false)}
-            onPointerMove={(e) => {
-              mouseX.set(e.clientX - bounds.x - bounds.width / 2);
-              mouseY.set(e.clientY - bounds.y - bounds.height / 2);
-            }}
+            
           >
             <motion.div
               className="shapes"

@@ -2,13 +2,11 @@ import { motion } from "framer-motion";
 import React from "react";
 import Button from "/components/button";
 import ButtonMobile from "../components/buttonMobile";
-import Chess from '../components/indexC/chess'
-import Climbing from "../components/indexC/climbing";
 
 
 function index() {
   return (
-    <div className="y-scroll overflow-hidden overflow-y-scroll">
+    <div className="">
       
       
      
@@ -45,6 +43,7 @@ function index() {
       
         
       </motion.div>
+      
 
      
     </div>
