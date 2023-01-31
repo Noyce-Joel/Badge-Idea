@@ -2,31 +2,16 @@ import { motion } from "framer-motion";
 import React from "react";
 import Button from "/components/button";
 import ButtonMobile from "../components/buttonMobile";
+import Chess from '../components/indexC/chess'
+import Climbing from "../components/indexC/climbing";
+
 
 function index() {
   return (
-    <div>
-      <motion.div
-        initial={{
-          opacity: 0,
-        }}
-        animate={{
-          opacity: 1,
-        }}
-        transition={{
-          duration: 1,
-          delay: 1.5,
-        }}
-        className="justify-center  text-white tracking-widest uppercase flex items-center mx-auto h-screen w-screen relative"
-      >
-       Goals
-
+    <div className="y-scroll overflow-hidden overflow-y-scroll">
       
-        
-      </motion.div>
-      <p>
-        Hey 
-       </p>
+      
+     
      
       <motion.div
         initial={{ opacity: 0 }}
@@ -38,7 +23,7 @@ function index() {
 
           ease: "anticipate",
         }}
-        className="top-[180px] hidden md:left-[55px] md:flex relative flex-col header"
+        className="top-[180px] hidden lg:left-[55px] lg:flex absolute flex-col header"
       >
         <Button/>
         
@@ -53,7 +38,7 @@ function index() {
 
           ease: "anticipate",
         }}
-        className="top-[180px] items-center flex md:hidden relative flex-col header"
+        className="top-[180px] items-center flex lg:hidden relative flex-col header"
       >
       <ButtonMobile />
 
@@ -61,9 +46,7 @@ function index() {
         
       </motion.div>
 
-      <div className="flex justify-center items-center relative text white w-screen h-screen">
-        Hey
-      </div>
+     
     </div>
   );
 }

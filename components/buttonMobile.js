@@ -31,8 +31,8 @@ function ButtonMobile() {
             whileTap="press"
             variants={{
               rest: { scale: 1,},
-              hover: { scale: 1.2, },
-              press: { scale: 1.4 },
+              hover: { scale: 1.1, },
+              press: { scale: 1.2 },
             }}
             onHoverStart={() => {
               resetMousePosition();
@@ -45,6 +45,7 @@ function ButtonMobile() {
             onTapStart={() => setIsPress(true)}
             onTap={() => setIsPress(false)}
             onTapCancel={() => setIsPress(false)}
+            
             
           >
             <motion.div
