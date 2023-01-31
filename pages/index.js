@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import Button from "/components/button";
+import ButtonMobile from "../components/buttonMobile";
 
 function index() {
   return (
@@ -33,9 +34,25 @@ function index() {
 
           ease: "anticipate",
         }}
-        className="top-[170px] left-[30px] flex relative flex-col header"
+        className="top-[180px] hidden md:left-[55px] md:flex relative flex-col header"
       >
-        <Button />
+        <Button/>
+        
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{
+          animation: { duration: 5 },
+          exit: { duration: 5 },
+
+          ease: "anticipate",
+        }}
+        className="top-[180px] items-center flex md:hidden relative flex-col header"
+      >
+      <ButtonMobile />
+        
       </motion.div>
     </div>
   );
