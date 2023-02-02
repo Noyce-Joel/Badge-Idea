@@ -41,7 +41,7 @@ export default function ContactMe({}: Props) {
       y: '100%'
     }}
     
-    className="absolute h-screen w-screen flex flex-shrink text-left px-10 justify-evenly items-center">
+    className="relative h-screen flex text-left px-10 justify-evenly items-center">
       
       <div className="relative grid-flow-row space-y-10">
         
@@ -63,7 +63,7 @@ export default function ContactMe({}: Props) {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="w-screen justify-center items-center grid grid-col space-y-4"
+          className="items-center grid grid-col space-y-4"
         >
           <div className="flex space-x-2">
             <input
