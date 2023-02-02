@@ -73,7 +73,7 @@ function ButtonMobile() {
               }}
               className="label"
               style={{
-                x: -100,
+                x: -94,
                 y: -30,
               }}
               exit={{
@@ -90,7 +90,7 @@ function ButtonMobile() {
               }}
               className="label"
               style={{
-                x: 40,
+                x: 34,
                 y: 30,
               }}
               exit={{

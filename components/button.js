@@ -19,7 +19,7 @@ export default function Index() {
   };
 
   return (
-    <div className="md:h-screen w-screen flex z-0 header">
+    <div className="md:h-screen h-screen w-screen flex z-0 header">
       <MotionConfig transition={transition}>
         <motion.div
           initail="false"
@@ -58,8 +58,8 @@ export default function Index() {
             whileTap="press"
             variants={{
               rest: { scale: 1 },
-              hover: { scale: 1.5 },
-              press: { scale: 1.4 },
+              hover: { scale: 1.25 },
+              press: { scale: 1.2 },
             }}
             onHoverStart={() => {
               resetMousePosition();

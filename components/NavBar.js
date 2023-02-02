@@ -12,7 +12,7 @@ export default function Navbar() {
   const [isPress2, setIsPress2] = useState(false);
 
   return (
-    <motion.div className="h-screen w-screen flex flex-col items-center justify-center z-50">
+    <motion.div className="overflow-clip h-screen w-screen flex flex-col items-center justify-center z-50">
       <MotionConfig transition={transition}>
         <motion.hgroup
           ref={ref}

@@ -21,11 +21,15 @@ function index() {
 
           ease: "anticipate",
         }}
-        className="top-[180px] hidden lg:left-[55px] lg:flex absolute flex-col header"
+        className="top-[180px] hidden lg:left-[40px] lg:flex absolute flex-col header"
       >
         <Button/>
         
       </motion.div>
+        <div className='flex flex-row items-center p-24 justify-center h-screen w-screen'>
+          Hey There
+        </div>
+
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
