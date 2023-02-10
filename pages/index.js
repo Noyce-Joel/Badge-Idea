@@ -21,7 +21,7 @@ function index() {
         <Button />
       </motion.div>
       <div className="flex flex-row items-center  justify-center h-screen w-screen">
-        Hey There
+        Hey There, Short Guy
       </div>
 
       <motion.div
