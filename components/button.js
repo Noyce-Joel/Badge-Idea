@@ -19,7 +19,7 @@ export default function Index() {
   };
 
   return (
-    <div className="md:h-screen h-screen w-screen flex z-0 header">
+    <div className="md:h-screen h-screen w-screen flex relative z-0 header">
       <MotionConfig transition={transition}>
         <motion.div
           initail="false"

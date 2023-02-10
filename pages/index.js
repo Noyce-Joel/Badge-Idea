@@ -3,14 +3,9 @@ import React from "react";
 import Button from "/components/button";
 import ButtonMobile from "../components/buttonMobile";
 
-
 function index() {
   return (
     <div className="">
-      
-      
-     
-     
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -21,14 +16,13 @@ function index() {
 
           ease: "anticipate",
         }}
-        className="top-[180px] hidden lg:left-[40px] lg:flex absolute flex-col header"
+        className="top-[180px] hidden lg:left-[40px] lg:flex absolute header"
       >
-        <Button/>
-        
+        <Button />
       </motion.div>
-        <div className='flex flex-row items-center p-24 justify-center h-screen w-screen'>
-          Hey There
-        </div>
+      <div className="flex flex-row items-center  justify-center h-screen w-screen">
+        Hey There
+      </div>
 
       <motion.div
         initial={{ opacity: 0 }}
@@ -42,14 +36,8 @@ function index() {
         }}
         className="top-[180px] items-center flex lg:hidden relative flex-col header"
       >
-      <ButtonMobile />
-
-      
-        
+        <ButtonMobile />
       </motion.div>
-      
-
-     
     </div>
   );
 }
