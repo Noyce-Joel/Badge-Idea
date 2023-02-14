@@ -19,7 +19,7 @@ export default function Index() {
   };
 
   return (
-    <div className="md:h-screen h-screen w-screen flex relative z-0 header">
+    <div className="z-0">
       <MotionConfig transition={transition}>
         <motion.div
           initail="false"
@@ -28,7 +28,7 @@ export default function Index() {
             hide: { opacity: 0 },
             rests: { opacity: 1 },
           }}
-          className="relative text-md text-white mb-[25px]"
+          className="text-md text-white mb-[25px]"
         >
           <motion.div
             id="writer"
@@ -45,90 +45,89 @@ export default function Index() {
             whileInView={{ once: true }}
           >
             <a className="ease-in ml-[95px]">@</a>
-          
           </motion.div>
         </motion.div>
 
-        <Link href="about" className="transition ease-out">
-          <motion.button
-            className="z-10"
-            ref={ref}
-            initial="false"
-            animate={isHover ? "hover" : "rest"}
-            whileTap="press"
+        <motion.button
+          className="z-10"
+          ref={ref}
+          initial="false"
+          animate={isHover ? "hover" : "rest"}
+          whileTap="press"
+          variants={{
+            rest: { scale: 1 },
+            hover: { scale: 1.25 },
+            press: { scale: 1.2 },
+          }}
+          onHoverStart={() => {
+            resetMousePosition();
+            setIsHover(true);
+          }}
+          onHoverEnd={() => {
+            resetMousePosition();
+            setIsHover(false);
+          }}
+          onTapStart={() => setIsPress(true)}
+          onTap={() => setIsPress(false)}
+          onTapCancel={() => setIsPress(false)}
+          onPointerMove={(e) => {
+            mouseX.set(e.clientX - bounds.x - bounds.width / 2);
+            mouseY.set(e.clientY - bounds.y - bounds.height / 2);
+          }}
+        >
+          <motion.div
+            className="shapes"
             variants={{
-              rest: { scale: 1 },
-              hover: { scale: 1.25 },
-              press: { scale: 1.2 },
+              rest: { opacity: 0 },
+              hover: { opacity: 1 },
             }}
-            onHoverStart={() => {
-              resetMousePosition();
-              setIsHover(true);
-            }}
-            onHoverEnd={() => {
-              resetMousePosition();
-              setIsHover(false);
-            }}
-            onTapStart={() => setIsPress(true)}
-            onTap={() => setIsPress(false)}
-            onTapCancel={() => setIsPress(false)}
-            
           >
-            <motion.div
-              className="shapes"
-              variants={{
-                rest: { opacity: 0 },
-                hover: { opacity: 1 },
-              }}
-            >
-              <motion.div className="container">
-                <Suspense fallback={null}>
-                  <Shapes
-                    isHover={isHover}
-                    isPress={isPress}
-                    mouseX={mouseX}
-                    mouseY={mouseY}
-                  />
-                </Suspense>
-              </motion.div>
+            <motion.div className="container">
+              <Suspense fallback={null}>
+                <Shapes
+                  isHover={isHover}
+                  isPress={isPress}
+                  mouseX={mouseX}
+                  mouseY={mouseY}
+                />
+              </Suspense>
             </motion.div>
-            <motion.div
-              variants={{
-                hover: { scale: 0.85, x: 22, y: -25 },
-                press: { scale: 1.1 },
-              }}
-              className="label"
-              style={{
-                x: -100,
-                y: -30,
-              }}
-              exit={{
-                x: 22,
-                y: -25,
-              }}
-            >
-              Joel
-            </motion.div>
-            <motion.div
-              variants={{
-                hover: { scale: 0.85, x: -98, y: 20 },
-                press: { scale: 1.1 },
-              }}
-              className="label"
-              style={{
-                x: 40,
-                y: 30,
-              }}
-              exit={{
-                x: -98,
-                y: 20,
-              }}
-            >
-              Noyce
-            </motion.div>
-          </motion.button>
-          
-        </Link>
+          </motion.div>
+          <motion.div
+            variants={{
+              hover: { scale: 0.85, x: 22, y: -25 },
+              press: { scale: 1.1 },
+            }}
+            className="label"
+            style={{
+              x: -100,
+              y: -30,
+            }}
+            exit={{
+              x: 22,
+              y: -25,
+            }}
+          >
+            Joel
+          </motion.div>
+          <motion.div
+            variants={{
+              hover: { scale: 0.85, x: -98, y: 20 },
+              press: { scale: 1.1 },
+            }}
+            className="label"
+            style={{
+              x: 40,
+              y: 30,
+            }}
+            exit={{
+              x: -98,
+              y: 20,
+            }}
+          >
+            Noyce
+          </motion.div>
+        </motion.button>
       </MotionConfig>
     </div>
   );
